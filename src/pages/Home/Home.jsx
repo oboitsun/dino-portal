@@ -8,9 +8,13 @@ export default function Home() {
     <div
       key="home"
       id="home"
-      className="flex flex-col items-center justify-between w-full overflow-hidden"
+      className="flex flex-col items-center justify-between w-full overflow-hidden relative"
     >
-      <div className="my-container h-full flex-grow flex flex-col ">
+      <div className="w-full absolute top-0 left-0">
+        <img className="w-full h-auto" src="assets/bg-login.png/" alt="bg" />
+        <div className="absolute bottom-0 w-full h-32 z-[2] bg-gradient-to-t from-turf to-transparent"></div>
+      </div>
+      <div className="my-container h-full flex-grow flex flex-col relative z-10">
         <HomeHeader />
 
         <motion.div
@@ -22,7 +26,10 @@ export default function Home() {
           <Outlet />
         </motion.div>
       </div>
-      <LoginFooter />
+      <div className="relative z-10">
+        {" "}
+        <LoginFooter />
+      </div>
     </div>
   );
 }

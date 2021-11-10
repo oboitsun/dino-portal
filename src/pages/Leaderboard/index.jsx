@@ -16,13 +16,13 @@ export default function Leaderboard() {
       <div className="grid-cols-2 grid gap-10 ">
         <div className="w-full h-auto relative pb-6">
           <SectionHeaderBackNav pageName="leaderboard" />
-          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-darkTurf"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
         </div>
         <div className="flex items-center relative pb-6">
           <p className="text-[32px] text-white text-border  leading-none">
             Latest giveaway winners
           </p>
-          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-darkTurf"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
         </div>
       </div>
       <div className="grid grid-cols-1 w-full pt-10 gap-5 ">

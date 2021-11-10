@@ -43,14 +43,14 @@ export default function Marketplace() {
         </div>
         <div className="flex w-full h-full items-center  flex-grow">
           <Dropdown options={sortBy} disabled heading={"Sort by"} />
-          <div className="h-10 w-1 bg-darkTurf mr-3 flex-shrink-0"></div>
+          <div className="h-10 w-1 bg-white mr-3 flex-shrink-0"></div>
           <Dropdown
             setStateFunc={setType}
             value={types[types.findIndex((el) => el.value === type)]}
             options={types}
             heading={"Show"}
           />
-          <div className="h-10 w-1 bg-darkTurf mr-3 flex-shrink-0"></div>
+          <div className="h-10 w-1 bg-white mr-3 flex-shrink-0"></div>
           <Dropdown
             setStateFunc={setRarity}
             value={rarities[rarities.findIndex((el) => el.value === rarity)]}
@@ -58,7 +58,7 @@ export default function Marketplace() {
             heading={"Rarity"}
           />
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-darkTurf"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
       </div>
 
       {paginated.length > 0 ? (

@@ -12,7 +12,7 @@ export default function NFTsGallery({ slides }) {
       <div className="grid grid-cols-2 gap-10 auto-rows-max h-full flex-grow">
         <div className="w-full h-auto relative">
           <SectionHeaderBackNav pageName="My Dino" />
-          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-darkTurf"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
         </div>
         <StoreButton />
         <div className="w-full  flex-grow  gallery auto-rows-min grid  grid-cols-4 gap-x-5 gap-y-6 max-h-[572px] overflow-y-auto">
