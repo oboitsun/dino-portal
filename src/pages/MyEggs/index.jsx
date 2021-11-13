@@ -33,18 +33,53 @@ const slides = [
   },
   {
     name: "Delicate egg",
-    age: "5 days",
-    pic: "../../assets/eggs/7.png",
+    age: "20 days",
+    pic: "../../assets/eggs/3.png",
   },
   {
     name: "Delicate egg",
     age: "5 days",
-    pic: "../../assets/eggs/8.png",
+    pic: "../../assets/eggs/4.png",
   },
   {
     name: "Delicate egg",
     age: "5 days",
-    pic: "../../assets/eggs/9.png",
+    pic: "../../assets/eggs/5.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/6.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/4.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/5.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/6.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/4.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/5.png",
+  },
+  {
+    name: "Delicate egg",
+    age: "5 days",
+    pic: "../../assets/eggs/6.png",
   },
 ];
 export default function MyEggs({}) {

@@ -29,7 +29,10 @@ export default function Login(props) {
       <div className="absolute top-10 w-full left-0 z-[2]">
         <LoginHeader />
       </div>
-      <img className="background" src={loginBG} alt="bg" />
+      <div className="w-full h-full absolute top-0 left-0">
+        <img className="w-full h-full object-cover" src="assets/bg-login.png/" alt="bg" />
+        <div className="absolute bottom-0 w-full h-32 z-[2] bg-gradient-to-t from-turf to-transparent"></div>
+      </div>
       <div className="login-window ">
         <img className="logo w-full" src="../assets/logo.png" alt="logo" />
         <p className="heading text-border">Lorem Ipsum is simply dummy text</p>

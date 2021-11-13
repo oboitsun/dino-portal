@@ -2,15 +2,15 @@ import React from "react";
 
 export default function MainSlide({ slide, bg }) {
   return (
-    <div className="slide-wrapper h-full relative ">
-      {/* {bg && (
+    <div className="slide-wrapper h-full relative w-4/5">
+      {bg && (
         <img
-          className="slide-bg main-slider-bg"
+          className={`slide-bg bg-gallery`}
           src="../../assets/slider1-bg.png"
           alt="bg"
         />
-      )} */}
-      <div className="absolute top-10 flex flex-col items-center">
+      )}
+      <div className="absolute top-10 flex flex-col items-center ">
         <p className="text-border text-2xl text-white">{slide.name}</p>
         <div className="relative -top-1">
           <img src="../../assets/age-pic.png" alt="age" />
@@ -19,7 +19,7 @@ export default function MainSlide({ slide, bg }) {
           </span>
         </div>
       </div>
-      <img className="w-full" src={slide.pic} alt={slide.name} />
+      <img className="w-full z-10" src={slide.pic} alt={slide.name} />
     </div>
   );
 }

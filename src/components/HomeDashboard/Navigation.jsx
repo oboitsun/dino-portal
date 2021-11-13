@@ -47,7 +47,7 @@ export default function Navigation() {
         <Link key={btn.name} to={btn.to}>
           <div key={btn.name} className={`dashboard-button ${btn.className}`}>
             <img className="mb-3" src={btn.icon} alt="icon" />
-            {btn.name}
+            <span>{btn.name}</span>
           </div>
         </Link>
       ))}

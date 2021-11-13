@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,30 +17,36 @@ SwiperCore.use([FreeMode, Navigation, Thumbs, Autoplay]);
 import "./home-slider.scss";
 import ThumbSlide from "../ThumbsSlide";
 import MainSlide from "../MainSlide";
+import { backs, randomBgIndex } from "../../utils";
 export default function HomeSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const slides = [
     {
       name: "Green dino",
       age: "10 days",
-      pic: "assets/dino-slide.png",
+      pic: "assets/dinos/1.png",
     },
     {
       name: "purple dino",
       age: "15 days",
-      pic: "assets/dino-slide.png",
+      pic: "assets/dinos/2.png",
     },
     {
       name: "orange dino",
       age: "20 days",
-      pic: "assets/dino-slide.png",
+      pic: "assets/dinos/3.png",
     },
     {
       name: "pink dino",
       age: "5 days",
-      pic: "assets/dino-slide.png",
+      pic: "assets/dinos/4.png",
     },
   ];
+  const [currentImgBG, setCurrentImageBG] = useState("assets/slider1-bg.png");
+
+  useEffect(() => {
+    setCurrentImageBG(backs[randomBgIndex(backs)]);
+  }, []);
   return (
     <div id="home-slider" className=" h-full overflow-hidden relative">
       <div id="home-slider-prev" className="slider-button prev">
@@ -49,6 +55,7 @@ export default function HomeSlider() {
       <div className="slider-button next">
         <img id="home-slider-next" src="../../assets/arrow-next.svg" alt="prev" />
       </div>
+
       <Swiper
         // autoplay={{ delay: 2500 }}
         onSwiper={setThumbsSwiper}
@@ -61,6 +68,7 @@ export default function HomeSlider() {
           prevEl: "#home-slider-prev",
         }}
       >
+        <img className="abs-centering slider-bg-big" src={currentImgBG} alt="bg" />
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <MainSlide slide={slide} />
@@ -82,7 +90,7 @@ export default function HomeSlider() {
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
-            <ThumbSlide slide={slide} />
+            <ThumbSlide bgSrc={currentImgBG} slide={slide} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -30,6 +30,22 @@
     font-size: 24px;
     height: 128px;
     justify-content: center;
+    transition: all 0.3s;
+    img {
+      transition: all 0.3s;
+    }
+    span {
+      transition: all 0.2s;
+    }
+    &:hover {
+      transform: translateY(-3%);
+      img {
+        transform: scale(2) translateY(25%);
+      }
+      span {
+        transform: scale(0) translateY(10%);
+      }
+    }
   }
   .my-dinos {
     background: linear-gradient(180deg, #e7b628 0%, #a9892c 100%);

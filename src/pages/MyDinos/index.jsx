@@ -4,22 +4,22 @@ const slides = [
   {
     name: "Green dino",
     age: "10 days",
-    pic: "assets/dino-slide.png",
+    pic: "assets/dinos/1.png",
   },
   {
     name: "purple dino",
     age: "15 days",
-    pic: "assets/dino-slide.png",
+    pic: "assets/dinos/2.png",
   },
   {
     name: "orange dino",
     age: "20 days",
-    pic: "assets/dino-slide.png",
+    pic: "assets/dinos/3.png",
   },
   {
     name: "pink dino",
     age: "5 days",
-    pic: "assets/dino-slide.png",
+    pic: "assets/dinos/4.png",
   },
 ];
 export default function MyDinos({}) {
