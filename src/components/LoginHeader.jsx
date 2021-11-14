@@ -1,11 +1,11 @@
 import React from "react";
 import Socials from "./Socials";
 const links = [
-  { text: "home", href: "/" },
-  { text: "about", href: "/" },
-  { text: "team", href: "/" },
-  { text: "roadmap", href: "/" },
-  { text: "market", href: "/" },
+  { text: "home", href: "https://dinos-five.vercel.app" },
+  { text: "about", href: "https://dinos-five.vercel.app#about-us" },
+  { text: "team", href: "https://dinos-five.vercel.app#team" },
+  { text: "roadmap", href: "https://dinos-five.vercel.app#roadmap" },
+  // { text: "market", href: "https://dinos-five.vercel.app" },
 ];
 export default function LoginHeader() {
   return (

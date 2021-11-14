@@ -68,7 +68,9 @@ export default function HomeSlider() {
           prevEl: "#home-slider-prev",
         }}
       >
-        <img className="abs-centering slider-bg-big" src={currentImgBG} alt="bg" />
+        <div className="slider-bg-big ">
+          <img className="object-cover w-full  h-full" src={currentImgBG} alt="bg" />
+        </div>
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <MainSlide slide={slide} />
