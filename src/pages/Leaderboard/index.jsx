@@ -2,12 +2,12 @@ import React from "react";
 import SectionHeaderBackNav from "../../components/SectionHeaderBackNav";
 import "./leaderboard.scss";
 const leaderboard = [
-  { id: 1, userName: "sergey", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
-  { id: 2, userName: "sergey", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
-  { id: 3, userName: "sergey", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
-  { id: 4, userName: "sergey", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
-  { id: 5, userName: "sergey", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
-  { id: 6, userName: "sergey", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
+  { id: 1, userName: "Dino #115", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
+  { id: 2, userName: "Dino #364", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
+  { id: 3, userName: "Dino #1003", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
+  { id: 4, userName: "Dino #276", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
+  { id: 5, userName: "Dino #749", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
+  { id: 6, userName: "Dino #33", common: 1, uncomm: 2, rare: 3, ultraRare: 2000 },
 ];
 export default function Leaderboard() {
   const userId = 4;

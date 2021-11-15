@@ -3,9 +3,11 @@ import SectionHeaderBackNav from "../../components/SectionHeaderBackNav";
 
 export default function Minigames() {
   return (
-    <div className="w-full">
+    <div className="w-full h-full flex flex-col flex-grow">
       <SectionHeaderBackNav pageName="Mini games" />
-      <div className="flex"></div>
+      <div className="w-full h-full flex flex-grow justify-center items-center">
+        <p className="text-9xl text-border text-white py-10">Coming Soon!</p>
+      </div>
     </div>
   );
 }
