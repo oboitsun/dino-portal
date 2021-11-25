@@ -13,6 +13,7 @@ import MyDinos from "./pages/MyDinos";
 import MyEggs from "./pages/MyEggs";
 import Store from "./pages/Store";
 import HelpCenter from "./pages/HelpCenter/HelpCenter";
+import Settings from "./pages/Settings/Settings";
 
 function App() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
             <Route path="/marketplace" element={<Marketplace />} />
             <Route path="/minigames" element={<Minigames />} />
             <Route path="/help" element={<HelpCenter />} />
+            <Route path="/settings" element={<Settings />} />
           </AnimatePresence>
         </Route>
       </Routes>{" "}

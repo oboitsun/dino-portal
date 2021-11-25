@@ -20,7 +20,9 @@ export default function HomeHeader() {
           <div className="w-1/2 wallet-id">xaj2u-2jdsadasd0dsad0sada0das</div>
           <div className="w-1/2">Disconnect</div>
         </button>
-        <button className="settings">my settings</button>
+        <Link to="/settings">
+          <button className="settings">my settings</button>
+        </Link>
       </div>
     </div>
   );

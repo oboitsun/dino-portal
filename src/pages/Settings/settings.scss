@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+.settings {
+  &__divider {
+    width: 100%;
+    background: white;
+    height: 3px;
+    border-radius: 3px;
+    margin: 24px 0;
+  }
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 16px 40px;
+    border: 3px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &__input {
+    flex-grow: 1;
+    color: white;
+    appearance: none;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+      caret-color: white;
+    }
+  }
+  &__label {
+    margin-right: 4px;
+    min-width: max-content;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .wallet {
+    color: white;
+    width: 100%;
+    border-radius: 40px;
+    border: 2px solid white;
+    padding: 24px;
+    line-height: 1;
+    font-size: 24px;
+  }
+  .plug {
+    background: $yellow;
+    border-color: $yellow;
+  }
+  .earth {
+    background: $black;
+    border-color: $black;
+  }
+}
