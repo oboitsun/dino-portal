@@ -25,20 +25,31 @@ export default function Login(props) {
   ];
   const [showModal, setShowModal] = useState(false);
   return (
-    <div id="login-page" className="w-full min-h-screen overflow-hidden relative">
+    <div
+      id="login-page"
+      className="w-full min-h-screen overflow-hidden relative"
+    >
       <div className="absolute top-10 w-full left-0 z-[2]">
         <LoginHeader />
       </div>
       <div className="w-full h-full absolute top-0 left-0">
-        <img className="w-full h-full object-cover" src="assets/bg-login.png/" alt="bg" />
+        <img
+          className="w-full h-full object-cover"
+          src="assets/bg-login.png/"
+          alt="bg"
+        />
         <div className="absolute bottom-0 w-full h-32 z-[2] bg-gradient-to-t from-turf to-transparent"></div>
       </div>
       <div className="login-window ">
         <img className="logo w-full" src="../assets/logo.png" alt="logo" />
-        <p className="heading text-border">Lorem Ipsum is simply dummy text</p>
+        <p className="heading text-border">Connect using your wallet below</p>
         <div className="grid gap-6 w-full">
           {wallets.map((wallet, i) => (
-            <button key={i} className={`wallet ${wallet.name}`} onClick={wallet.onClick}>
+            <button
+              key={i}
+              className={`wallet ${wallet.name}`}
+              onClick={wallet.onClick}
+            >
               connect {wallet.name} wallet
             </button>
           ))}
