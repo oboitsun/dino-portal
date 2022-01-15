@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function LoginFooter({ login = false, ...props }) {
+  const currentYear =  new Date
   return (
     <div className="flex items-center justify-center mx-auto gap-10 uppercase text-white text-xl">
       <img
@@ -21,7 +22,7 @@ export default function LoginFooter({ login = false, ...props }) {
           need help ?
         </button>
       )}
-      <p className="">Dino world</p>
+      <p className="">IC Dinos {currentYear.getFullYear()}</p>
     </div>
   );
 }

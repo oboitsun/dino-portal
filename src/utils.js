@@ -8,3 +8,4 @@ export const randomBgIndex = (backs) => {
   if (!backs?.length) return backs;
   return Math.floor(Math.random() * backs.length);
 };
+

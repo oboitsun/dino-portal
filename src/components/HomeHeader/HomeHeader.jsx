@@ -3,6 +3,7 @@ import "./home-header.scss";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../reducers/uiReducer";
 import { Link } from "react-router-dom";
+import DinosTokenLogo from "../DinosTokenLogo";
 export default function HomeHeader() {
   const dispatch = useDispatch();
   const logOut = () => {
@@ -16,6 +17,7 @@ export default function HomeHeader() {
       <div className="flex items-center gap-5">
         <img className="w-auto" src="../../assets/dfinity-logo.png" alt="Dfinity logo" />
         <div className="header-balance">2.70195258 ICP</div>
+        <button className="disconnect-button btn-filled gap-2 dinos-score"><span className="relative top-0.5">1035</span> <DinosTokenLogo/></button>
         <button onClick={logOut} className="disconnect-button btn-filled">
           <div className="w-1/2 wallet-id">xaj2u-2jdsadasd0dsad0sada0das</div>
           <div className="w-1/2">Disconnect</div>

@@ -8,10 +8,10 @@ export default function Banner() {
         src="assets/eggs-banner.png"
         alt="eggs banner"
       />
-      <div className="w-full leading-[0.8]  uppercase flex flex-col justify-center text-yellow">
-        <p className="text-[93px]">new </p>
-        <p className="text-[57px] text-white">unique </p>
-        <p className="text-[32px] leading-none">eggs part #2</p>
+      <div className="w-full relative top-2 leading-[0.8] uppercase flex flex-col justify-center text-white">
+        <p className="text-[76px] relative top-2">EGGS </p>
+        <p className="text-[29px] mb-2 leading-none">hatching q2 </p>
+        <p className="text-[80px]  text-yellow">2022</p>
       </div>
     </div>
   );

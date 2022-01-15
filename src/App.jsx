@@ -14,6 +14,7 @@ import MyEggs from "./pages/MyEggs";
 import Store from "./pages/Store";
 import HelpCenter from "./pages/HelpCenter/HelpCenter";
 import Settings from "./pages/Settings/Settings";
+import EggHatchModal from "./components/EggHatchModal";
 
 function App() {
   const location = useLocation();
@@ -43,6 +44,7 @@ function App() {
           </AnimatePresence>
         </Route>
       </Routes>{" "}
+      <EggHatchModal />
     </div>
   );
 }

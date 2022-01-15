@@ -7,7 +7,7 @@ import "./nft-gallery.scss";
 import GallerySlide from "./GallerySlide";
 import { backs, randomBgIndex } from "../../utils";
 
-export default function NFTsGallery({ slides }) {
+export default function NFTsGallery({ slides,isEgg = false }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentImgBG, setCurrentImageBG] = useState("assets/slider1-bg.png");
 
@@ -25,6 +25,7 @@ export default function NFTsGallery({ slides }) {
         <div className="w-full  flex-grow  gallery auto-rows-min grid  grid-cols-4 gap-x-5 gap-y-6  overflow-y-auto ">
           {slides.map((slide, i) => (
             <ThumbsSlide
+            isEgg = {isEgg}
               bgSrc={currentImgBG}
               onClick={() => {
                 setCurrentSlide(i);
@@ -36,7 +37,7 @@ export default function NFTsGallery({ slides }) {
           ))}
         </div>
         <div className="picture  relative max-h-[572px]">
-          <GallerySlide bgSrc={currentImgBG} slide={slides[currentSlide]} bg />
+          <GallerySlide isEgg = {isEgg} bgSrc={currentImgBG} slide={slides[currentSlide]} bg />
         </div>
       </div>
     </div>
