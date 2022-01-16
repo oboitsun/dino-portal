@@ -27,9 +27,9 @@ export default function Login(props) {
   return (
     <div
       id="login-page"
-      className="w-full min-h-screen overflow-hidden relative"
+      className="w-full min-h-screen overflow-hidden relative flex flex-col justify-between items-center py-10"
     >
-      <div className="absolute top-10 w-full left-0 z-[2]">
+      <div className="   w-full left-0 z-[2]">
         <LoginHeader />
       </div>
       <div className="w-full h-full absolute top-0 left-0">
@@ -40,7 +40,7 @@ export default function Login(props) {
         />
         <div className="absolute bottom-0 w-full h-32 z-[2] bg-gradient-to-t from-turf to-transparent"></div>
       </div>
-      <div className="login-window ">
+      <div className="login-window my-auto">
         <img className="logo w-full" src="../assets/logo.png" alt="logo" />
         <p className="heading text-border">Connect using your wallet below</p>
         <div className="grid gap-6 w-full">
@@ -55,7 +55,7 @@ export default function Login(props) {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-10 w-full left-0 z-[2]">
+      <div className=" w-full left-0 z-[2]">
         <LoginFooter
           onClick={() => {
             setShowModal(true);

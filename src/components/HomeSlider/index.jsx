@@ -22,24 +22,54 @@ export default function HomeSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const slides = [
     {
-      name: "Green dino",
+      name: "allosaurus",
       age: "10 days",
-      pic: "assets/dinos/1.png",
+      pic: "assets/dinos/allosaurus.png",
     },
     {
-      name: "purple dino",
+      name: "anklyosaurus",
       age: "15 days",
-      pic: "assets/dinos/2.png",
+      pic: "assets/dinos/anklyosaurus.png",
     },
     {
-      name: "orange dino",
+      name: "brachiosaurus",
       age: "20 days",
-      pic: "assets/dinos/3.png",
+      pic: "assets/dinos/brachiosaurus.png",
     },
     {
-      name: "pink dino",
+      name: "brontosaurus",
       age: "5 days",
-      pic: "assets/dinos/4.png",
+      pic: "assets/dinos/brontosaurus.png",
+    },
+    {
+      name: "iguanodon",
+      age: "10 days",
+      pic: "assets/dinos/iguanodon.png",
+    },
+    {
+      name: "parasaurolophus",
+      age: "15 days",
+      pic: "assets/dinos/parasaurolophus.png",
+    },
+    {
+      name: "stegasaurus",
+      age: "20 days",
+      pic: "assets/dinos/stegasaurus.png",
+    },
+    {
+      name: "trex",
+      age: "5 days",
+      pic: "assets/dinos/trex.png",
+    },
+    {
+      name: "triceratops",
+      age: "5 days",
+      pic: "assets/dinos/triceratops.png",
+    },
+    {
+      name: "velociraptor",
+      age: "5 days",
+      pic: "assets/dinos/velociraptor.png",
     },
   ];
   const [currentImgBG, setCurrentImageBG] = useState("assets/slider1-bg.png");
