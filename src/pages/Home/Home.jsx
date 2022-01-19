@@ -25,7 +25,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="w-full h-full  my-auto flex flex-col py-10 "
+          className="w-full h-full  mb-auto flex flex-col py-10 "
         >
           <Outlet />
         </motion.div>

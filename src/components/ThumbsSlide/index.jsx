@@ -5,6 +5,7 @@ import './thumbs-slide.scss';
 import { setEgg } from '../../reducers/EggHatchReducer';
 import { showEggHatchModal } from '../../reducers/uiReducer';
 export default function ThumbSlide({
+  thumbLocation = 'page',
   isEgg,
   slide,
   active = false,
@@ -15,6 +16,10 @@ export default function ThumbSlide({
   const showHatchModal = () => {
     dispatch(setEgg(slide));
     dispatch(showEggHatchModal(true));
+  };
+  const nameSizes = {
+    home: 'text-[50%] xl:text-[70%]',
+    page: 'text-[90%] ',
   };
   return (
     <div
@@ -45,11 +50,21 @@ export default function ThumbSlide({
         />
       </div>
 
-      <div className=" flex flex-col items-center  bio-wrapper relative z-[11]">
-        <p className="text-border text-[50%] xl:text-[70%] text-white ">
+      <div
+        className={`flex flex-col items-center  bio-wrapper relative z-[11]  ${
+          thumbLocation === 'home' ? '' : 'pt-2'
+        }`}
+      >
+        <p
+          className={`text-border text-center leading-1  text-white ${nameSizes[thumbLocation]}`}
+        >
           {slide.name}
         </p>
-        <div className="relative -top-1  px-4  flex justify-center items-center">
+        <div
+          className={`relative   px-4  flex justify-center items-center ${
+            thumbLocation === 'home' ? '-top-1' : '-top-2'
+          }`}
+        >
           <div className="absolute top-0 left-0 w-full h-full">
             <AgeButton />
           </div>

@@ -1,68 +1,71 @@
-import React, { useState } from "react";
-import Dropdown from "../../components/Dropdown";
-import MarketplaceCard from "../../components/MarketplaceCard";
-import SectionHeaderBackNav from "../../components/SectionHeaderBackNav";
-import { cards } from "./db";
-import Pagination from "./Pagination";
+import React, { useState } from 'react';
+import Dropdown from '../../components/Dropdown';
+import MarketplaceCard from '../../components/MarketplaceCard';
+import SectionHeaderBackNav from '../../components/SectionHeaderBackNav';
+import { cards } from './db';
+import Pagination from './Pagination';
 const sortBy = [
   {
-    value: "rarity",
-    label: "rarity",
+    value: 'rarity',
+    label: 'rarity',
   },
 ];
 const types = [
   {
-    value: "all",
-    label: "All",
+    value: 'all',
+    label: 'All',
   },
-  { value: "egg", label: "Eggs" },
-  { value: "dino", label: "Dinos" },
+  { value: 'egg', label: 'Eggs' },
+  { value: 'dino', label: 'Dinos' },
 ];
 const rarities = [
-  { value: "all", label: "All" },
-  { value: "common", label: "Common" },
-  { value: "uncommon", label: "Uncommon" },
-  { value: "rare", label: "Rare" },
-  { value: "ultraRare", label: "Ultra Rare" },
+  { value: 'all', label: 'All' },
+  { value: 'common', label: 'Common' },
+  { value: 'uncommon', label: 'Uncommon' },
+  { value: 'rare', label: 'Rare' },
+  { value: 'ultraRare', label: 'Ultra Rare' },
 ];
 export default function Marketplace() {
-  const [type, setType] = useState("all");
-  const [rarity, setRarity] = useState("all");
+  const [type, setType] = useState('all');
+  const [rarity, setRarity] = useState('all');
 
   const sortedFiltered = cards
-    .filter((card) => card.type === type || (type === "all" && card))
-    .filter((card) => card.rarity === rarity || (rarity === "all" && card));
+    .filter((card) => card.type === type || (type === 'all' && card))
+    .filter((card) => card.rarity === rarity || (rarity === 'all' && card));
   const [page, setPage] = useState(1);
   const perPage = 10;
-  const paginated = sortedFiltered.slice(page * perPage - perPage, page * perPage);
+  const paginated = sortedFiltered.slice(
+    page * perPage - perPage,
+    page * perPage
+  );
   return (
     <div className="w-full ">
       <div className="w-full flex justify-between items-center pb-6 relative">
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <SectionHeaderBackNav pageName="Marketplace" />
         </div>
-        <div className="flex w-full h-full items-center  flex-grow">
-          <Dropdown options={sortBy} disabled heading={"Sort by"} />
+        <div className=" hidden lg:flex w-full h-full items-center  flex-grow">
+          <Dropdown options={sortBy} disabled heading={'Sort by'} />
           <div className="h-10 w-1 bg-white mr-3 flex-shrink-0"></div>
           <Dropdown
             setStateFunc={setType}
             value={types[types.findIndex((el) => el.value === type)]}
             options={types}
-            heading={"Show"}
+            heading={'Show'}
           />
           <div className="h-10 w-1 bg-white mr-3 flex-shrink-0"></div>
           <Dropdown
             setStateFunc={setRarity}
             value={rarities[rarities.findIndex((el) => el.value === rarity)]}
             options={rarities}
-            heading={"Rarity"}
+            heading={'Rarity'}
           />
         </div>
         <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
       </div>
 
       {paginated.length > 0 ? (
-        <div className="grid grid-cols-4 gap-x-5 gap-y-10 pt-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-10 pt-10">
           {paginated.map((card, i) => (
             <MarketplaceCard key={i} card={card} />
           ))}
@@ -74,8 +77,8 @@ export default function Marketplace() {
           </p>
           <button
             onClick={() => {
-              setType("all");
-              setRarity("all");
+              setType('all');
+              setRarity('all');
             }}
             className="text-yellow text-2xl"
           >

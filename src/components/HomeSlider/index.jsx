@@ -130,7 +130,11 @@ export default function HomeSlider() {
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
-            <ThumbSlide bgSrc={currentImgBG} slide={slide} />
+            <ThumbSlide
+              thumbLocation="home"
+              bgSrc={currentImgBG}
+              slide={slide}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
