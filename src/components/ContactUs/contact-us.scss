@@ -1,9 +1,11 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 #contact-us {
-  padding: 40px 0;
-
+  padding-top: 40px;
+  flex-grow: 1;
   .contact-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 24px;
   }
   .form-input {
@@ -20,9 +22,9 @@
   .submit {
     margin-top: 24px;
     align-self: flex-end;
-    width: 50%;
+    width: 100%;
     justify-self: flex-end;
-    padding: 16px 40px;
+    padding: 16px 40px 12px;
     color: #fff;
     border-radius: 140px;
     background-color: $black;
@@ -35,5 +37,7 @@
   }
   .poof {
     width: 100%;
+  }
+  @media (min-width: 1024px) {
   }
 }

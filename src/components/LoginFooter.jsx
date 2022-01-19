@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function LoginFooter({ login = false, ...props }) {
-  const currentYear =  new Date
+  const currentYear = new Date();
   return (
-    <div className="flex items-center justify-center mx-auto gap-10 uppercase text-white text-xl">
+    <div className="flex items-center justify-center mx-auto gap-10 uppercase text-white text-xl pt-6 pb-10">
       <img
-        className="w-auto block"
+        className="w-auto hidden lg:block"
         src="../../assets/dfinity-logo.png"
         alt="dfinity logo"
       />
@@ -14,15 +14,20 @@ export default function LoginFooter({ login = false, ...props }) {
       {!login ? (
         <Link to="/help">
           <button className="px-6 py-4 leading-none bg-myBlack rounded-full">
-            need help ?
+            <span className="relative top-1"> need help ?</span>
           </button>
         </Link>
       ) : (
-        <button {...props} className="px-6 py-4 leading-none bg-myBlack rounded-full">
-          need help ?
+        <button
+          {...props}
+          className="px-6 py-4 leading-none bg-myBlack rounded-full"
+        >
+          <span className="relative lg:top-1 text-xs lg:text-base">
+            need help ?
+          </span>
         </button>
       )}
-      <p className="">IC Dinos {currentYear.getFullYear()}</p>
+      <p className="relative top-0.5">IC Dinos {currentYear.getFullYear()}</p>
     </div>
   );
 }

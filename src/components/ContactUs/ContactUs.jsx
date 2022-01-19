@@ -1,13 +1,18 @@
-import React from "react";
-import "./contact-us.scss";
+import React from 'react';
+import './contact-us.scss';
 
 export default function ContactUs() {
   return (
     <div id="contact-us">
       <div className="my-container relative ">
-        <form className="contact-form z-10 flex flex-col">
-          <div className="contact-grid">
-            <input className="form-input" required type="text" placeholder="Name" />
+        <form className="contact-form z-10 flex flex-col h-full justify-between">
+          <div className="contact-grid h-full">
+            <input
+              className="form-input"
+              required
+              type="text"
+              placeholder="Name"
+            />
             <input
               className="form-input"
               required
@@ -17,7 +22,7 @@ export default function ContactUs() {
 
             <textarea
               placeholder="Comment"
-              className="form-input comment"
+              className="form-input comment flex-grow"
               rows={4}
             ></textarea>
           </div>

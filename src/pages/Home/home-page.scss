@@ -1,7 +1,10 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 #home {
   background: $turf;
   min-height: 100vh;
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 40px;
+
+  @media (min-width: 1024px) {
+    // padding-top: 80px;
+  }
 }
