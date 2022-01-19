@@ -20,8 +20,12 @@ export default function MarketplaceCard({ card }) {
         <img className="w-full" src={card.imgSrc} alt="nft-card" />
       </div>
       <div className="w-full flex items-center text-2xl py-1 justify-between px-1">
-        <p className="text-border text-white">{card.name}</p>
-        <p className="text-yellow text-border">{card.price} ICP</p>
+        <p className="text-border text-white text-xs lg:text-base">
+          {card.name}
+        </p>
+        <p className="text-yellow text-border text-xs lg:text-base">
+          {card.price} ICP
+        </p>
       </div>
       <a className="w-full block" href="/">
         <img className="w-full" src="assets/buy-now.svg" alt="buy now" />
