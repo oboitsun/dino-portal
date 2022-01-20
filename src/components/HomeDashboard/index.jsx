@@ -8,7 +8,7 @@ export default function HomeDashboard() {
       <div className="w-full ">
         <Navigation />
       </div>
-      <div className="hidden lg:block w-full  relative overflow-hidden max-h-[670px]">
+      <div className="hidden lg:block w-full  relative overflow-hidden h-full max-h-[670px]">
         <HomeSlider />
       </div>
     </div>

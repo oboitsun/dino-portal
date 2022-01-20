@@ -17,7 +17,7 @@ export default function NFTsGallery({ slides, isEgg = false }) {
         {slides.map((slide, i) => (
           <ThumbsSlide
             isEgg={isEgg}
-            bgSrc={currentImgBG}
+            bgSrc={slide?.back || currentImgBG}
             onClick={() => {
               setCurrentSlide(i);
             }}
@@ -30,7 +30,7 @@ export default function NFTsGallery({ slides, isEgg = false }) {
       <div className="picture  relative max-h-[572px] col-span-2 lg:col-span-1 lg:col-start-2 row-start-3 lg:row-start-2">
         <GallerySlide
           isEgg={isEgg}
-          bgSrc={currentImgBG}
+          bgSrc={slides[currentSlide]?.back || currentImgBG}
           slide={slides[currentSlide]}
           bg
         />
