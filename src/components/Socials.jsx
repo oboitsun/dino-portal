@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function Socials() {
   return (
@@ -50,7 +50,7 @@ export default function Socials() {
         </svg>
         {/* twitter icon */}
       </a>
-      <a href="https://twitter.com">
+      <a href="https://twitter.com/icdinos">
         <svg
           width="24"
           height="24"

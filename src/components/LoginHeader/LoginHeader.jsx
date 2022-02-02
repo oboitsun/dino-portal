@@ -16,7 +16,7 @@ export default function LoginHeader({ handleShowMenu }) {
         {links.map((link) => (
           <a
             key={link.text}
-            className="text-white uppercase text-lg lg:text-xl"
+            className="text-white uppercase text-lg lg:text-xl text-shadow"
             href={link.href}
           >
             {link.text}
