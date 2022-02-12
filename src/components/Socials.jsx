@@ -4,7 +4,7 @@ export default function Socials() {
   return (
     <div className="flex gap-8">
       {/* instagram icon */}
-      <a href="https://instagram.com">
+      {/* <a href="https://instagram.com">
         <svg
           width="24"
           height="24"
@@ -24,7 +24,7 @@ export default function Socials() {
             </clipPath>
           </defs>
         </svg>
-      </a>
+      </a> */}
       {/* discord icon */}
       <a href="https://discord.com">
         <svg

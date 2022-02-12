@@ -26,7 +26,7 @@ export default function ContactUs() {
               rows={4}
             ></textarea>
           </div>
-          <input className="submit" type="submit" value="REQUEST A CALL BACK" />
+          <input className="submit" type="submit" value="get in touch" />
         </form>
       </div>
     </div>
