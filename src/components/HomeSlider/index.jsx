@@ -78,7 +78,7 @@ export default function HomeSlider() {
         watchSlidesProgress={true}
         className="mySwiper"
       >
-        {slides.map((slide, i) => (
+        {dinos.map((slide, i) => (
           <SwiperSlide key={i}>
             <ThumbSlide
               thumbLocation="home"
