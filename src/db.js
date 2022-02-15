@@ -62,32 +62,38 @@ export const dinos = [
   {
     name: 'ankylosaurus',
     age: '1 days',
+    back: 'assets/slider1-bg.png',
     pic: 'assets/dinos/ankylosaurus_baby.png',
   },
   {
     name: 'brachiosaurus',
     age: '1 days',
+    back: 'assets/slider1-bg2.jpg',
     pic: 'assets/dinos/brachiosaurus_baby.png',
   },
   {
     name: 'brontosaurus',
     age: '1 days',
+    back: 'assets/slider1-bg2.jpg',
     pic: 'assets/dinos/brontosaurus_baby.png',
   },
 
   {
     name: 'parasaurolophus',
     age: '1 days',
+    back: 'assets/slider1-bg2.jpg',
     pic: 'assets/dinos/parasaurolophus_baby.png',
   },
   {
     name: 'pterodactyl',
     age: '1 days',
+    back: 'assets/slider1-bg3.png',
     pic: 'assets/dinos/pterodactyl_baby.png',
   },
   {
     name: 'stegosaurus',
     age: '1 days',
+    back: 'assets/slider1-bg3.png',
     pic: 'assets/dinos/stegosaurus_baby.png',
   },
   {
@@ -97,17 +103,20 @@ export const dinos = [
   },
   {
     name: 'trex',
+    back: 'assets/slider1-bg2.jpg',
     age: '1 days',
     pic: 'assets/dinos/trex_baby.png',
   },
   {
     name: 'triceratops',
     age: '1 days',
+    back: 'assets/slider1-bg.png',
     pic: 'assets/dinos/triceratops_baby.png',
   },
   {
     name: 'veloceraptor',
     age: '1 days',
+    back: 'assets/slider1-bg3.png',
     pic: 'assets/dinos/veloceraptor_baby.png',
   },
 ];
