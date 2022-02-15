@@ -27,9 +27,9 @@ export default function HomeSlider() {
       pic: 'assets/dinos/allosaurus.png',
     },
     {
-      name: 'anklyosaurus',
+      name: 'ankylosaurus',
       age: '15 days',
-      pic: 'assets/dinos/anklyosaurus.png',
+      pic: 'assets/dinos/ankylosaurus.png',
     },
     {
       name: 'brachiosaurus',
@@ -52,9 +52,9 @@ export default function HomeSlider() {
       pic: 'assets/dinos/parasaurolophus.png',
     },
     {
-      name: 'stegasaurus',
+      name: 'stegosaurus',
       age: '20 days',
-      pic: 'assets/dinos/stegasaurus.png',
+      pic: 'assets/dinos/stegosaurus.png',
     },
     {
       name: 'trex',
@@ -67,9 +67,56 @@ export default function HomeSlider() {
       pic: 'assets/dinos/triceratops.png',
     },
     {
-      name: 'velociraptor',
+      name: 'veloceraptor',
       age: '5 days',
-      pic: 'assets/dinos/velociraptor.png',
+      pic: 'assets/dinos/veloceraptor.png',
+    },
+
+    {
+      name: 'ankylosaurus',
+      age: '1 days',
+      pic: 'assets/dinos/ankylosaurus_baby.png',
+    },
+    {
+      name: 'brachiosaurus',
+      age: '1 days',
+      pic: 'assets/dinos/brachiosaurus_baby.png',
+    },
+    {
+      name: 'brontosaurus',
+      age: '1 days',
+      pic: 'assets/dinos/brontosaurus_baby.png',
+    },
+
+    {
+      name: 'parasaurolophus',
+      age: '1 days',
+      pic: 'assets/dinos/parasaurolophus_baby.png',
+    },
+    {
+      name: 'pterodactyl',
+      age: '1 days',
+      pic: 'assets/dinos/pterodactyl_baby.png',
+    },
+    {
+      name: 'stegosaurus',
+      age: '1 days',
+      pic: 'assets/dinos/stegosaurus_baby.png',
+    },
+    {
+      name: 'trex',
+      age: '1 days',
+      pic: 'assets/dinos/trex_baby.png',
+    },
+    {
+      name: 'triceratops',
+      age: '1 days',
+      pic: 'assets/dinos/triceratops_baby.png',
+    },
+    {
+      name: 'veloceraptor',
+      age: '1 days',
+      pic: 'assets/dinos/veloceraptor_baby.png',
     },
   ];
   const [currentImgBG, setCurrentImageBG] = useState('assets/slider1-bg.png');
