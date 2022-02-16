@@ -33,7 +33,7 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
           ?
         </div> */}
         <img
-          className="h-4/5 w-auto z-[2] absolute bottom-0 left-1/2 transform -translate-x-1/2 "
+          className="h-2/3 w-auto z-[2] absolute bottom-0 left-1/2 transform -translate-x-1/2 "
           src={slide.pic}
           alt={slide.name}
         />
