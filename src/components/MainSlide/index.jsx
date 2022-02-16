@@ -20,10 +20,10 @@ export default function MainSlide({ slide, bg }) {
         </div>
       </div>
       <div className="relative h-4/5 w-auto mx-auto z-10 ">
-        <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-8xl text-border text-white">
+        {/* <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-8xl text-border text-white">
           ?
-        </div>
-        <img className="h-full  w-auto mask" src={slide.pic} alt={slide.name} />
+        </div> */}
+        <img className="h-full  w-auto " src={slide.pic} alt={slide.name} />
       </div>
     </div>
   );
