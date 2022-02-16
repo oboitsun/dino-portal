@@ -1,43 +1,43 @@
-import { Link } from "react-router-dom";
-import Banner from "./Banner";
+import { Link } from 'react-router-dom';
+import Banner from './Banner';
 
 export default function Navigation() {
   const buttons = [
     {
-      name: "my dino",
-      icon: "../../assets/my-dino-icon.svg",
-      to: "/my-dinos",
-      className: "my-dinos",
+      name: 'my dinos',
+      icon: '../../assets/my-dino-icon.svg',
+      to: '/my-dinos',
+      className: 'my-dinos',
     },
     {
-      name: "my eggs",
-      icon: "../../assets/my-eggs-icon.svg",
-      to: "/my-eggs",
-      className: "my-eggs",
+      name: 'my eggs',
+      icon: '../../assets/my-eggs-icon.svg',
+      to: '/my-eggs',
+      className: 'my-eggs',
     },
     {
-      name: "mini games",
-      icon: "../../assets/minigames-icon.svg",
-      to: "/minigames",
-      className: "minigames",
+      name: 'Game',
+      icon: '../../assets/minigames-icon.svg',
+      to: '/minigames',
+      className: 'minigames',
     },
     {
-      name: "leaderboard",
-      icon: "../../assets/leaderboard-icon.svg",
-      to: "/leaderboard",
-      className: "leader",
+      name: 'leaderboard',
+      icon: '../../assets/leaderboard-icon.svg',
+      to: '/leaderboard',
+      className: 'leader',
     },
     {
-      name: "store",
-      icon: "../../assets/cart-icon.svg",
-      to: "/store",
-      className: "store",
+      name: 'store',
+      icon: '../../assets/cart-icon.svg',
+      to: '/store',
+      className: 'store',
     },
     {
-      name: "marketplace",
-      icon: "../../assets/market-icon.svg",
-      to: "/marketplace",
-      className: "market",
+      name: 'marketplace',
+      icon: '../../assets/market-icon.svg',
+      to: '/marketplace',
+      className: 'market',
     },
   ];
   return (

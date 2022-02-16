@@ -1,5 +1,10 @@
 .nft-gallery-page {
   @apply w-full h-full flex-grow flex flex-col justify-between;
+
+  .mask {
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg)
+      brightness(0%) contrast(80%);
+  }
   .bio-wrapper {
     filter: grayscale(1);
   }

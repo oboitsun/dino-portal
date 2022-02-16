@@ -29,8 +29,9 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
             </span>
           </div>
         </div>
+
         <img
-          className="h-4/5 w-auto z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2"
+          className="h-4/5 w-auto z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 mask"
           src={slide.pic}
           alt={slide.name}
         />

@@ -42,7 +42,16 @@ export default function ThumbSlide({
             </p>
           </button>
         )}
-        <img className="w-full slide-pic " src={slide.pic} alt={slide.name} />
+        <div className="w-full slide-pic relative">
+          <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-sm  text-white">
+            ?
+          </div>
+          <img
+            className=" w-full h-full mask"
+            src={slide.pic}
+            alt={slide.name}
+          />
+        </div>
         <img
           className="abs-centering slider-bg-thumb"
           src={bgSrc ? bgSrc : 'assets/slider1-bg.png'}

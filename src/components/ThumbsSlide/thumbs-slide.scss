@@ -37,7 +37,10 @@
   justify-content: center;
   align-items: flex-end;
 }
-
+.mask {
+  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg)
+    brightness(0%) contrast(80%);
+}
 .slide-pic {
   width: 100%;
   position: relative;
@@ -52,8 +55,8 @@
   width: 100%;
   height: auto;
 }
-.nft-gallery-page .nft-wrap.active{
-  .nft-img{
-    border-color: #ffffff ;
+.nft-gallery-page .nft-wrap.active {
+  .nft-img {
+    border-color: #ffffff;
   }
 }
