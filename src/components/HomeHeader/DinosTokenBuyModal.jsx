@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import DinosTokenBuyStatus from './DinosTokenBuyStatus';
-
+import NumberFormat from 'react-number-format';
 function DinosTokenBuyModal({ showTokenModal, handleToggleTokenModal }) {
   const [showStatus, setShowStatus] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [coins, setCoins] = useState('');
-  const multiplicator = 20;
+  const multiplicator = 10000;
+  const addCommas = (num) =>
+    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const removeNonNumeric = (num) => num.toString().replace(/[^0-9]/g, '');
+  const handleChange = (event) =>
+    setCoins(addCommas(removeNonNumeric(event.target.value)));
   const handleBuyNowClick = async () => {
     setIsSuccess(Math.random() >= 0.5);
     setShowStatus(true);
@@ -49,16 +54,28 @@ function DinosTokenBuyModal({ showTokenModal, handleToggleTokenModal }) {
                 Quantity:
               </span>
               <div className="p-5 rounded-[20px] border-[3px] border-white flex items-center">
-                <input
+                <NumberFormat
+                  className="bg-transparent appearance-none  relative top-0.5 placeholder-white/50 max-w-[184px] focus:outline-none"
+                  thousandSeparator={true}
+                  placeholder="write quantity"
+                  value={coins}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue >= 0;
+                  }}
+                  onValueChange={(e) => {
+                    setCoins(e.floatValue);
+                  }}
+                />
+                {/* <input
                   value={coins}
                   onChange={(e) => {
                     setCoins(e.target.value);
                   }}
                   type="number"
                   min={0}
-                  className="bg-transparent appearance-none  relative top-0.5 placeholder-white/50 max-w-[184px] focus:outline-none"
                   placeholder="write quantity"
-                />
+                /> */}
                 <img
                   className="ml-9"
                   src="/assets/dino-coin.svg"
@@ -72,7 +89,7 @@ function DinosTokenBuyModal({ showTokenModal, handleToggleTokenModal }) {
                 Total:
               </span>
               <span className="mr-6 text-2xl leading-none relative top-0.5 text-white/50">
-                {coins * multiplicator} ICP
+                {coins / multiplicator} ICP
               </span>
             </div>
             <button
@@ -87,7 +104,7 @@ function DinosTokenBuyModal({ showTokenModal, handleToggleTokenModal }) {
           </>
         ) : (
           <DinosTokenBuyStatus
-            dinos={coins * multiplicator}
+            dinos={coins / multiplicator}
             isSuccess={isSuccess}
             handleClose={handleCloseModal}
           />

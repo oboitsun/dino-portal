@@ -1,6 +1,11 @@
 import React from 'react';
 
 function DinosTokenBuyStatus({ dinos, isSuccess, handleClose }) {
+  const dinosStringAmount = dinos
+    .toString()
+    .replace(/[^0-9]/g, '')
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
   return (
     <div className="flex flex-col items-center">
       <div className="w-40">
@@ -19,7 +24,8 @@ function DinosTokenBuyStatus({ dinos, isSuccess, handleClose }) {
       </p>
       {isSuccess ? (
         <p className="text-2xl text-center">
-          you have added <span className="text-yellow">{dinos}</span> dinos
+          you have added{' '}
+          <span className="text-yellow">{dinosStringAmount}</span> dinos
         </p>
       ) : (
         <p className="text-2xl text-center">
