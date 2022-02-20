@@ -3,23 +3,40 @@ import ThumbsSlide from '../../components/ThumbsSlide/';
 import './nft-gallery.scss';
 import GallerySlide from './GallerySlide';
 import { backs, randomBgIndex } from '../../utils';
+import Pagination from '../Pagination';
 
-export default function NFTsGallery({ slides, isEgg = false }) {
+export default function NFTsGallery({
+  setShowModal,
+  setCurrentNft,
+  slides,
+  isEgg = false,
+}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentImgBG, setCurrentImageBG] = useState('assets/slider1-bg.png');
-
+  const [page, setPage] = useState(1);
+  const perPage = 10;
+  const paginated = slides.slice(page * perPage - perPage, page * perPage);
   useEffect(() => {
     setCurrentImageBG(backs[randomBgIndex(backs)]);
   }, []);
+  const handleCurrentSlide = (i) => {
+    setCurrentSlide(i);
+    setCurrentNft(paginated[i]);
+  };
+  const handleNextPage = (i) => {
+    setPage(i);
+    setCurrentSlide(0);
+    setCurrentNft(paginated[0]);
+  };
   return (
     <>
-      <div className="w-full  flex-grow  gallery auto-rows-min grid col-span-2 lg:col-span-1  grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
-        {slides.map((slide, i) => (
+      <div className="w-full  flex-grow  gallery auto-rows-min grid col-span-2 lg:col-span-1  grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-4">
+        {paginated.map((slide, i) => (
           <ThumbsSlide
             isEgg={isEgg}
             bgSrc={slide?.back || currentImgBG}
             onClick={() => {
-              setCurrentSlide(i);
+              handleCurrentSlide(i);
             }}
             key={i}
             slide={slide}
@@ -27,14 +44,30 @@ export default function NFTsGallery({ slides, isEgg = false }) {
           />
         ))}
       </div>
-      <div className="picture  relative max-h-[572px] col-span-2 lg:col-span-1 lg:col-start-2 row-start-3 lg:row-start-2">
+      <div className="picture  relative max-h-[572px] overflow-hidden col-span-2 lg:col-span-1 lg:col-start-2 row-start-3 lg:row-start-2">
         <GallerySlide
           isEgg={isEgg}
-          bgSrc={slides[currentSlide]?.back || currentImgBG}
-          slide={slides[currentSlide]}
+          bgSrc={paginated[currentSlide]?.back || currentImgBG}
+          slide={paginated[currentSlide]}
           bg
         />
       </div>
+      <Pagination
+        total={slides.length}
+        perPage={perPage}
+        page={page}
+        setCurrentPage={handleNextPage}
+      />
+      <button
+        onClick={() => {
+          setShowModal(true);
+        }}
+        className="h-10 w-full rounded-xl border-[3px] border-black bg-yellow"
+      >
+        <span className="relative top-0.5 text-white">
+          More info {paginated[currentSlide]?.name}
+        </span>
+      </button>
     </>
   );
 }

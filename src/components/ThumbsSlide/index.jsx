@@ -57,7 +57,7 @@ export default function ThumbSlide({
 
       <div
         className={`flex flex-col items-center  bio-wrapper relative z-[11]  ${
-          thumbLocation === 'home' ? '' : 'pt-2'
+          thumbLocation === 'home' ? '' : 'pt-1'
         }`}
       >
         <p
@@ -70,10 +70,10 @@ export default function ThumbSlide({
             thumbLocation === 'home' ? '-top-1' : '-top-2'
           }`}
         >
-          <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-0.5 left-0 w-full h-full">
             <AgeButton />
           </div>
-          <p className="relative top-1 py-2 z-[2] text-xs xl:text-base text-white leading-[0.8]">
+          <p className="relative text-xs top-1 py-2 z-[2]  text-white leading-[0.8]">
             {slide.age}
           </p>
         </div>
