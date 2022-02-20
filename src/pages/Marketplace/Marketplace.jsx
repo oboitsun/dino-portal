@@ -3,7 +3,7 @@ import Dropdown from '../../components/Dropdown';
 import MarketplaceCard from '../../components/MarketplaceCard';
 import SectionHeaderBackNav from '../../components/SectionHeaderBackNav';
 import { cards } from './db';
-import Pagination from './Pagination';
+import Pagination from '../../components/Pagination';
 const sortBy = [
   {
     value: 'rarity',

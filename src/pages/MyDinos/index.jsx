@@ -1,9 +1,15 @@
+import { useState } from 'react';
+import ModalAbout from '../../components/ModalAbout/ModalAbout';
 import NFTsGallery from '../../components/NFTsGallery';
 import SectionHeaderBackNav from '../../components/SectionHeaderBackNav';
 import StoreButton from '../../components/StoreButton';
 import { dinos } from '../../db';
 import './my-dinos.scss';
+
 export default function MyDinos({}) {
+  const [currentDino, setCurrentDino] = useState(dinos[0]);
+  const [showModal, setShowModal] = useState(false);
+  console.log(showModal);
   return (
     <div
       id="my-dinos"
@@ -18,9 +24,15 @@ export default function MyDinos({}) {
           <div className="store-link">
             <StoreButton />
           </div>
-          <NFTsGallery isEgg={false} slides={dinos} />
+          <NFTsGallery
+            setShowModal={setShowModal}
+            setCurrentNft={setCurrentDino}
+            isEgg={false}
+            slides={dinos}
+          />
         </div>
       </div>
+      <ModalAbout show={showModal} setShow={setShowModal} slide={currentDino} />
     </div>
   );
 }

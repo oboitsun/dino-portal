@@ -6,11 +6,7 @@ function DinosTokenBuyModal({ showTokenModal, handleToggleTokenModal }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [coins, setCoins] = useState('');
   const multiplicator = 10000;
-  const addCommas = (num) =>
-    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  const removeNonNumeric = (num) => num.toString().replace(/[^0-9]/g, '');
-  const handleChange = (event) =>
-    setCoins(addCommas(removeNonNumeric(event.target.value)));
+
   const handleBuyNowClick = async () => {
     setIsSuccess(Math.random() >= 0.5);
     setShowStatus(true);

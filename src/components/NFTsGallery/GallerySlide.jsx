@@ -10,10 +10,10 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
     dispatch(showEggHatchModal(true));
   };
   return (
-    <div className="  flex flex-col items-center gap-2">
-      <div className="slide-wrapper">
+    <div className="w-full h-full flex flex-col items-center gap-2">
+      <div className="slide-wrapper h-full">
         <img
-          className={`bg-gallery`}
+          className={`bg-gallery h-full w-full`}
           src={bgSrc ? bgSrc : '../../assets/slider1-bg.png'}
           alt="bg"
         />
