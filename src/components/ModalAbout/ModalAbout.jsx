@@ -35,7 +35,6 @@ export default function ModalAbout({ show, setShow, slide }) {
         <div className="ModalAbout_about p-10">
           <p className="text-border text-yellow text-2xl pb-10">My Dino</p>
           <div className="grid gap-6">
-            {' '}
             {fields.map((f) => (
               <Field key={f.label} {...f} />
             ))}
