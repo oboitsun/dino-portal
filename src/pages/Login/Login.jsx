@@ -23,7 +23,7 @@ export default function Login(props) {
   const wallets = [
     { name: 'stoic', onClick: handleLogin },
     { name: 'plug', onClick: handleLogin },
-    // { name: 'earth', onClick: handleLogin },
+    { name: 'earth', onClick: handleLogin },
   ];
 
   const handleShowMenu = () => {
