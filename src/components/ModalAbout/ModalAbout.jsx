@@ -43,7 +43,17 @@ export default function ModalAbout({ show, setShow, slide }) {
             </button>
           </div>
         </div>
-        <div className="ModalAbout__slide">
+        <div className="ModalAbout__slide relative">
+          <button
+            onClick={handleCloseModal}
+            className="w-8 h-8 rounded-full bg-myBlack p-2 top-2 right-2 absolute z-10"
+          >
+            <img
+              className="w-full"
+              src="/assets/close-icon.svg"
+              alt="close modal"
+            />
+          </button>
           <GallerySlide
             isEgg={false}
             bgSrc={slide?.back || currentImgBG || ''}
