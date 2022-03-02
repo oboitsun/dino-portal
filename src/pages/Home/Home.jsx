@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import './home-page.scss';
 import { Outlet } from 'react-router-dom';
 import HomeHeader from '../../components/HomeHeader/HomeHeader';
 import LoginFooter from '../../components/LoginFooter';
 import { motion } from 'framer-motion';
+import { backs } from './backs';
 export default function Home() {
+  const currentBG = backs[Math.floor(Math.random() * backs.length)];
   return (
     <div
       key="home"
@@ -11,11 +14,7 @@ export default function Home() {
       className="flex flex-col items-center justify-between w-full overflow-hidden relative"
     >
       <div className="w-full h-full absolute top-0 left-0">
-        <img
-          className="w-full h-full  object-cover"
-          src="assets/bg-login.png/"
-          alt="bg"
-        />
+        <img className="w-full h-full  object-cover" src={currentBG} alt="bg" />
         <div className="absolute bottom-0 w-full h-32 z-[2] bg-gradient-to-t from-turf to-transparent"></div>
       </div>
       <div className="my-container h-full flex-grow flex flex-col w-full relative z-10 cont">

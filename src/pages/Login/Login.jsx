@@ -7,8 +7,9 @@ import LoginHeader from '../../components/LoginHeader/LoginHeader';
 import LoginFooter from '../../components/LoginFooter';
 import Modal from '../../components/Modal';
 import LoginMenuModal from '../../components/LoginHeader/LoginMenuModal';
-
+import { backs } from '../Home/backs';
 export default function Login(props) {
+  const currentBG = backs[Math.floor(Math.random() * backs.length)];
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
   let navigate = useNavigate();
@@ -36,11 +37,7 @@ export default function Login(props) {
       className="w-full min-h-screen overflow-hidden relative   "
     >
       <div className="w-full h-full absolute top-0 left-0">
-        <img
-          className="w-full h-full object-cover"
-          src="assets/bg-login.png/"
-          alt="bg"
-        />
+        <img className="w-full h-full object-cover" src={currentBG} alt="bg" />
         <div className="absolute bottom-0 w-full h-32 z-[2] bg-gradient-to-t from-turf to-transparent"></div>
       </div>
       <div className="cont flex flex-col justify-between items-center">
