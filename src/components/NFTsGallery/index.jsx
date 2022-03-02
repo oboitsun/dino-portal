@@ -47,7 +47,7 @@ export default function NFTsGallery({
       <div className="picture  relative max-h-[572px] overflow-hidden col-span-2 lg:col-span-1 lg:col-start-2 row-start-3 lg:row-start-2">
         <GallerySlide
           isEgg={isEgg}
-          bgSrc={paginated[currentSlide]?.back || currentImgBG}
+          bgSrc={paginated[currentSlide]?.back}
           slide={paginated[currentSlide]}
           bg
         />

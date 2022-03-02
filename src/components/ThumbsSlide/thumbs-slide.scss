@@ -53,8 +53,9 @@
 }
 .slider-bg-thumb {
   z-index: 0;
-  width: auto;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .nft-gallery-page .nft-wrap.active {
   .nft-img {

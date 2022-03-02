@@ -9,7 +9,7 @@ import './my-dinos.scss';
 export default function MyDinos({}) {
   const [currentDino, setCurrentDino] = useState(dinos[0]);
   const [showModal, setShowModal] = useState(false);
-  console.log(showModal);
+
   return (
     <div
       id="my-dinos"
