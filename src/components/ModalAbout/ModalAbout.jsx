@@ -54,12 +54,7 @@ export default function ModalAbout({ show, setShow, slide }) {
               alt="close modal"
             />
           </button>
-          <GallerySlide
-            isEgg={false}
-            bgSrc={slide?.back || currentImgBG || ''}
-            slide={slide}
-            bg
-          />
+          <GallerySlide isEgg={false} bgSrc={slide?.back} slide={slide} bg />
         </div>
       </div>
     </div>
