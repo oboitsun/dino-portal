@@ -10,6 +10,7 @@ export default function NFTsGallery({
   setCurrentNft,
   slides,
   isEgg = false,
+  showMoreInfo = true,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentImgBG, setCurrentImageBG] = useState('assets/slider1-bg.png');
@@ -58,16 +59,18 @@ export default function NFTsGallery({
         page={page}
         setCurrentPage={handleNextPage}
       />
-      <button
-        onClick={() => {
-          setShowModal(true);
-        }}
-        className="h-10 w-full rounded-xl border-[3px] border-black bg-yellow"
-      >
-        <span className="relative top-0.5 text-white">
-          More info {paginated[currentSlide]?.name}
-        </span>
-      </button>
+      {showMoreInfo && (
+        <button
+          onClick={() => {
+            setShowModal(true);
+          }}
+          className="h-10 w-full rounded-xl border-[3px] border-black bg-yellow"
+        >
+          <span className="relative top-0.5 text-white">
+            More info {paginated[currentSlide]?.name}
+          </span>
+        </button>
+      )}
     </>
   );
 }

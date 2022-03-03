@@ -2,13 +2,9 @@ import React from 'react';
 import './main-slide.scss';
 export default function MainSlide({ slide, bg }) {
   return (
-    <div className="slide-wrapper  relative w-4/5">
+    <div className="slide-wrapper  relative w-4/5 overflow-hidden">
       {bg && (
-        <img
-          className={`slide-bg bg-gallery`}
-          src="../../assets/slider1-bg.png"
-          alt="bg"
-        />
+        <img className={`slide-bg bg-gallery`} src={slide.back} alt="bg" />
       )}
       <div className="absolute top-10 flex flex-col items-center ">
         <p className="text-border text-2xl text-white">{slide.name}</p>
