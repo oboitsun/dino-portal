@@ -10,7 +10,7 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
     dispatch(showEggHatchModal(true));
   };
   return (
-    <div className="w-full h-full flex flex-col items-center gap-2">
+    <div className="w-full h-full flex flex-col items-center gap-1">
       <div className="slide-wrapper h-full">
         <img
           className={`bg-gallery h-full w-full`}
@@ -41,7 +41,7 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
       {isEgg && (
         <button
           onClick={isEgg && showHatchModal}
-          className="bg-yellow w-full text-white border-[3px] border-myBlack rounded-xl leading-none py-3"
+          className="bg-yellow w-full text-white border-[3px] border-myBlack rounded-xl leading-none py-3 "
         >
           <span className="relative top-0.5">Hatch egg</span>
         </button>

@@ -44,7 +44,7 @@ export default function HomeSlider() {
         // autoplay={{ delay: 2500 }}
         onSwiper={setThumbsSwiper}
         loop={true}
-        spaceBetween={10}
+        spaceBetween={0}
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
         navigation={{
@@ -53,18 +53,19 @@ export default function HomeSlider() {
         }}
       >
         <div className="slider-bg-big ">
-          <img
+          {/* <img
             className="object-cover w-full  h-full"
             src={currentImgBG}
             alt="bg"
-          />
+          /> */}
         </div>
         {dinos.map((slide, i) => (
           <SwiperSlide key={i}>
-            <MainSlide slide={slide} />
+            <MainSlide slide={slide} bg />
           </SwiperSlide>
         ))}
       </Swiper>
+
       <Swiper
         style={{
           '--swiper-navigation-color': '#fff',

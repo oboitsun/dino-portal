@@ -50,7 +50,7 @@ export default function ThumbSlide({
 
         <img
           className="abs-centering slider-bg-thumb"
-          src={bgSrc ? bgSrc : 'assets/slider1-bg.png'}
+          src={slide.back ? slide.back : 'assets/slider1-bg.png'}
           alt="bg"
         />
       </div>
