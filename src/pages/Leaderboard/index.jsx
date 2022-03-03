@@ -91,7 +91,7 @@ export default function Leaderboard() {
               )}
               <span className="abs-centering z-10 pt-1">{i + 1}.</span>
             </div>
-            <p className="justify-self-start"> sergey</p>
+            <p className="justify-self-start"> T-Rex</p>
             <p>4.15</p>
             <p>4.15</p>
             <p>4.15</p>
