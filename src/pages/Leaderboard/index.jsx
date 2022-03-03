@@ -4,7 +4,7 @@ import './leaderboard.scss';
 const leaderboard = [
   {
     id: 1,
-    userName: 'Dino #115',
+    userName: 'T-rex',
     common: 1,
     uncomm: 2,
     rare: 3,
