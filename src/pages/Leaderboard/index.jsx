@@ -4,7 +4,7 @@ import './leaderboard.scss';
 const leaderboard = [
   {
     id: 1,
-    userName: 'Dino #115',
+    userName: 'T-rex',
     common: 1,
     uncomm: 2,
     rare: 3,
@@ -91,7 +91,7 @@ export default function Leaderboard() {
               )}
               <span className="abs-centering z-10 pt-1">{i + 1}.</span>
             </div>
-            <p className="justify-self-start"> sergey</p>
+            <p className="justify-self-start"> T-Rex</p>
             <p>4.15</p>
             <p>4.15</p>
             <p>4.15</p>
