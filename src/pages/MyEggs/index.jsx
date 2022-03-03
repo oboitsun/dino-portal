@@ -32,7 +32,7 @@ const slides = [
     age: '5 days',
     pic: '../../assets/eggs/4.png',
     isReadyToHatch: true,
-    back: 'assets/nftBacks/4jpg',
+    back: 'assets/nftBacks/4.jpg',
   },
   {
     name: 'Delicate egg',
