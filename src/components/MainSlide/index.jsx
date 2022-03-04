@@ -19,7 +19,11 @@ export default function MainSlide({ slide, bg }) {
         {/* <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-8xl text-border text-white">
           ?
         </div> */}
-        <img className="h-full  w-auto " src={slide.pic} alt={slide.name} />
+        <img
+          className="h-full  w-auto mx-auto "
+          src={slide.pic}
+          alt={slide.name}
+        />
       </div>
     </div>
   );
