@@ -55,16 +55,10 @@ export default function Leaderboard() {
   const userId = 4;
   return (
     <div className="w-full">
-      <div className="grid-cols-2 grid gap-10 ">
+      <div className="grid-cols-1 grid gap-10 ">
         <div className="w-full h-auto relative lg:pb-6 col-span-2 lg:col-span-1">
           <SectionHeaderBackNav pageName="leaderboard" />
           <div className="hidden lg:block absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
-        </div>
-        <div className="hidden lg:flex items-center relative pb-6">
-          <p className="text-[32px] text-white text-border  leading-none">
-            Latest giveaway winners
-          </p>
-          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-white"></div>
         </div>
       </div>
       <div className="hidden lg:grid grid-cols-1 w-full pt-10 gap-5 ">
