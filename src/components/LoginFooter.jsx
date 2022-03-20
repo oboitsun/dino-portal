@@ -12,7 +12,7 @@ export default function LoginFooter({ login = false, ...props }) {
       />
 
       {!login ? (
-        <Link to="/help">
+        <Link style={{ display: 'none' }} to="/help">
           <button className="px-6 py-4 leading-none bg-myBlack rounded-full">
             <span className="relative top-1"> need help ?</span>
           </button>
