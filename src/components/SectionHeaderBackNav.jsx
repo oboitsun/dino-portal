@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function SectionHeaderBackNav({ pageName = '' }) {
+export default function SectionHeaderBackNav({ pageName = "" }) {
   return (
     <div className="w-full flex items-center">
       <Link to="/">
@@ -12,7 +12,7 @@ export default function SectionHeaderBackNav({ pageName = '' }) {
         />
       </Link>
       <p className="text-border text-xl lg:text-3xl text-white ml-6">
-        {pageName}
+        <span className="relative top-1"> {pageName}</span>
       </p>
     </div>
   );

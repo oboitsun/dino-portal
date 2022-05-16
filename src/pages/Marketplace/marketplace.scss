@@ -1,0 +1,59 @@
+.dashboard-button {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 5px solid #a58115;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1;
+  padding: 24px 30px;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 20px;
+  line-height: 1;
+}
+.BackgroundFilter {
+  background: linear-gradient(180deg, #e7b628 0%, #a9892c 100%);
+  border-color: #a58115;
+}
+.PriceFilter {
+  background: linear-gradient(180deg, #ff9400 0%, #cc7703 100%);
+  border-color: #9b6418;
+  .price-input {
+    font-size: 14px;
+    padding: 20px 20px 16px 20px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    width: 80px;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+.ApplyFilters {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: white;
+  line-height: 1;
+  padding: 18px 0 14px 0;
+  background: linear-gradient(180deg, #3a3a3a 0%, #242424 100%);
+  border-color: #000;
+}
+.AgeFilter {
+  background: linear-gradient(180deg, #739a3a 0%, #5b7c29 100%);
+  border-color: #486819;
+}
+.RarityFilter {
+  background: linear-gradient(180deg, #bfad75 0%, #988857 100%);
+  border-color: #8a7c4e;
+}
+.ItemsFilter {
+  background: linear-gradient(180deg, #8c7d4e 0%, #6f6033 100%);
+  border-color: #645422;
+}
