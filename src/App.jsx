@@ -31,7 +31,7 @@ function App() {
             </RequireAuth>
           }
         >
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence>
             <Route path="/" element={<HomeDashboard />} />
             <Route path="/my-dinos" element={<MyDinos />} />
             <Route path="/my-eggs" element={<MyEggs />} />

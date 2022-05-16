@@ -17,7 +17,13 @@ const colourStyles = {
     color: "white",
     border: "none",
   }),
-  dropdownIndicator: (styles) => ({ ...styles, color: "white" }),
+  dropdownIndicator: (styles) => ({
+    ...styles,
+    color: "white",
+    position: "relative",
+    padding: 0,
+    marginBottom: "6px",
+  }),
   indicatorSeparator: (styles) => ({ ...styles, color: "white", display: "none" }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {
@@ -29,17 +35,11 @@ const colourStyles = {
   },
 };
 
-export default function Dropdown({
-  options,
-  heading,
-  disabled,
-  setStateFunc = () => {},
-  value,
-}) {
+export default function Dropdown({ options, heading, disabled, setStateFunc = () => {}, value }) {
   return (
     <div className="w-full relative flex items-center">
       <p className={`${disabled ? "text-gray-300" : "text-white"} min-w-max pr-1`}>
-        {heading}:
+        <span>{heading}:</span>
       </p>
       <div className="w-full">
         <Select
