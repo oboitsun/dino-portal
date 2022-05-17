@@ -31,17 +31,15 @@ function App() {
             </RequireAuth>
           }
         >
-          <AnimatePresence>
-            <Route path="/" element={<HomeDashboard />} />
-            <Route path="/my-dinos" element={<MyDinos />} />
-            <Route path="/my-eggs" element={<MyEggs />} />
-            <Route path="/leaderboard" element={<Leaderboard />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/marketplace" element={<Marketplace />} />
-            <Route path="/minigames" element={<Minigames />} />
-            <Route path="/help" element={<HelpCenter />} />
-            <Route path="/settings" element={<Settings />} />
-          </AnimatePresence>
+          <Route path="/" element={<HomeDashboard />} />
+          <Route path="/my-dinos" element={<MyDinos />} />
+          <Route path="/my-eggs" element={<MyEggs />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/minigames" element={<Minigames />} />
+          <Route path="/help" element={<HelpCenter />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>{" "}
       <EggHatchModal />
