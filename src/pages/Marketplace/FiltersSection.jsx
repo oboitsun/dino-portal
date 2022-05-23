@@ -53,7 +53,7 @@ export default function FiltersSection({
         items={items}
         setItems={setItems}
       />
-      <button className="ApplyFilters ">apply filters</button>
+      {/* <button className="ApplyFilters ">apply filters</button> */}
     </div>
   );
 }

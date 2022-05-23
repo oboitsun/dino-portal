@@ -62,7 +62,7 @@ export default function Marketplace() {
               />
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 w-full h-1 rounded-full bg-[#8A7C4E]"></div>
+          <div className="absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-white"></div>
         </div>
 
         <div className="w-full flex gap-5 pt-10">
