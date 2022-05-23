@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 #home-slider {
   .swiper {
     width: 100%;
@@ -107,6 +107,9 @@
     width: 25%;
     height: 100%;
     filter: grayscale(1);
+    &:hover {
+      filter: grayscale(0.5);
+    }
   }
   .mySwiper .swiper-slide .thumbs {
     border-color: black;
@@ -114,6 +117,9 @@
 
   .mySwiper .swiper-slide-thumb-active {
     filter: grayscale(0);
+    &:hover {
+      filter: grayscale(0);
+    }
   }
   .mySwiper .swiper-slide-thumb-active .thumbs {
     border-color: white;

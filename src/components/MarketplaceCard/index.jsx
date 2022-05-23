@@ -11,13 +11,10 @@ export default function MarketplaceCard({ card }) {
   return (
     <div className="MarketplaceCard w-full flex flex-col ">
       <div className="w-full relative">
-        <div
-          style={{ background: rarityColors[card.rarity] }}
-          className="absolute  top-2 lg:top-5 left-1/2 transform -translate-x-1/2 px-2 py-0.5 lg:py-1 rounded-full text-white  text-xs border-4 border-myBlack min-w-[70px] text-center"
-        >
+        <div style={{ background: rarityColors[card.rarity] }} className="card-rarity">
           <span className="relative top-0.5"> {card.text}</span>
         </div>
-        <img className="w-full" src={card.imgSrc} alt="nft-card" />
+        <img className="w-full card-pic" src={card.imgSrc} alt="nft-card" />
       </div>
       <div className="w-full flex items-center text-2xl py-1 justify-between px-1">
         <p className="text-border text-white text-xs lg:text-sm">{card.name}</p>
