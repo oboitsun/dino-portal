@@ -1,8 +1,8 @@
-import React from 'react';
-import AgeButton from '../AgeButton';
-import { useDispatch } from 'react-redux';
-import { setEgg } from '../../reducers/EggHatchReducer';
-import { showEggHatchModal } from '../../reducers/uiReducer';
+import React from "react";
+import AgeButton from "../AgeButton";
+import { useDispatch } from "react-redux";
+import { setEgg } from "../../reducers/EggHatchReducer";
+import { showEggHatchModal } from "../../reducers/uiReducer";
 export default function GallerySlide({ isEgg, slide, bgSrc }) {
   const dispatch = useDispatch();
   const showHatchModal = () => {
@@ -14,7 +14,7 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
       <div className="slide-wrapper h-full">
         <img
           className={`bg-gallery h-full w-full`}
-          src={bgSrc ? bgSrc : '../../assets/slider1-bg.png'}
+          src={bgSrc ? bgSrc : "../../assets/slider1-bg.png"}
           alt="bg"
         />
 
@@ -41,9 +41,11 @@ export default function GallerySlide({ isEgg, slide, bgSrc }) {
       {isEgg && (
         <button
           onClick={isEgg && showHatchModal}
-          className="bg-yellow w-full text-white border-[3px] border-myBlack rounded-xl leading-none py-3 "
+          className="bg-yellow w-full text-white border-[3px] border-myBlack rounded-xl leading-none py-3 group "
         >
-          <span className="relative top-0.5">Hatch egg</span>
+          <span className="relative top-0.5 block group-hover:scale-110 transition-all">
+            Hatch egg
+          </span>
         </button>
       )}
     </div>

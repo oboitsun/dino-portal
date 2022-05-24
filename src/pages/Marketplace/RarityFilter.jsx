@@ -2,7 +2,7 @@ import React from "react";
 import ExpandableBlock from "../../components/ExpandableBlock";
 import CheckboxList from "./CheckboxList";
 
-export default function RarityFilter({ expanded, handleExpand, rarity, setRarrity }) {
+export default function RarityFilter({ expanded, handleExpand, rarity, setRarity }) {
   const rarities = [
     { value: "all", label: "All" },
     { value: "common", label: "Common" },
@@ -18,7 +18,7 @@ export default function RarityFilter({ expanded, handleExpand, rarity, setRarrit
         label="Rarity"
         handleExpand={handleExpand}
       >
-        <CheckboxList list={rarities} values={rarity} setStateFunc={setRarrity} />
+        <CheckboxList list={rarities} values={rarity} setStateFunc={setRarity} />
       </ExpandableBlock>
     </div>
   );

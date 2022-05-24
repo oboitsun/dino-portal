@@ -18,7 +18,7 @@ export default function CheckboxList({ list, values, setStateFunc, multiselect =
             onClick={() => {
               handleItemClick(item.value);
             }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 cursor-pointer"
           >
             <div
               className={`border-[3px] border-white rounded w-4 h-4 ${isChecked ? "bg-white" : ""}`}

@@ -38,8 +38,7 @@
   align-items: flex-end;
 }
 .mask {
-  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg)
-    brightness(0%) contrast(80%);
+  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(0%) contrast(80%);
 }
 .slide-pic {
   height: 66%;
@@ -60,5 +59,25 @@
 .nft-gallery-page .nft-wrap.active {
   .nft-img {
     border-color: #ffffff;
+    transition: all 0.2s;
+  }
+}
+.nft-wrap {
+  .nft-img {
+    transition: all 0.2s;
+  }
+  &:nth-child(2n) {
+    .nft-img {
+      &:hover {
+        transform: scale(1.02) rotate(3deg);
+      }
+    }
+  }
+  &:nth-child(odd) {
+    .nft-img {
+      &:hover {
+        transform: scale(1.02) rotate(-3deg);
+      }
+    }
   }
 }
