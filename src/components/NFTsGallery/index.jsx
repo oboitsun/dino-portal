@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import ThumbsSlide from '../../components/ThumbsSlide/';
-import './nft-gallery.scss';
-import GallerySlide from './GallerySlide';
-import { backs, randomBgIndex } from '../../utils';
-import Pagination from '../Pagination';
+import { useState, useEffect } from "react";
+import ThumbsSlide from "../../components/ThumbsSlide/";
+import "./nft-gallery.scss";
+import GallerySlide from "./GallerySlide";
+import { backs, randomBgIndex } from "../../utils";
+import Pagination from "../Pagination";
 
 export default function NFTsGallery({
   setShowModal,
@@ -13,7 +13,7 @@ export default function NFTsGallery({
   showMoreInfo = true,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentImgBG, setCurrentImageBG] = useState('assets/slider1-bg.png');
+  const [currentImgBG, setCurrentImageBG] = useState("assets/slider1-bg.png");
   const [page, setPage] = useState(1);
   const perPage = 10;
   const paginated = slides.slice(page * perPage - perPage, page * perPage);
@@ -45,7 +45,7 @@ export default function NFTsGallery({
           />
         ))}
       </div>
-      <div className="picture  relative max-h-[572px] overflow-hidden col-span-2 lg:col-span-1 lg:col-start-2 row-start-3 lg:row-start-2">
+      <div className="picture  relative  overflow-hidden col-span-2 lg:col-span-1 lg:col-start-2 row-start-3 lg:row-start-2">
         <GallerySlide
           isEgg={isEgg}
           bgSrc={paginated[currentSlide]?.back}
@@ -66,7 +66,7 @@ export default function NFTsGallery({
           }}
           className="h-10 w-full rounded-xl border-[3px] border-black bg-yellow"
         >
-          <span className="relative top-0.5 text-white">
+          <span className="relative top-0.5 text-white block hover:scale-105 transform transition-all">
             More info {paginated[currentSlide]?.name}
           </span>
         </button>
